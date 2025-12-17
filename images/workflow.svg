@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 1400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 1300" xmlns="http://www.w3.org/2000/svg">
   <!-- Define gradients and styles -->
   <defs>
     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -25,10 +25,6 @@
       <stop offset="0%" style="stop-color:#30cfd0;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#330867;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
-    </linearGradient>
     
     <!-- Arrow marker -->
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
@@ -41,169 +37,170 @@
     Credit Card Fraud Detection Workflow
   </text>
   
-  <!-- Step 1: Data Loading -->
-  <rect x="250" y="80" width="300" height="90" rx="10" fill="url(#grad1)" />
+  <!-- Step 1: Data Understanding -->
+  <rect x="250" y="80" width="300" height="110" rx="10" fill="url(#grad1)" />
   <text x="400" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-    1. Data Loading &amp; Exploration
+    1. Data Understanding
   </text>
   <text x="400" y="135" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Import dataset (284,807 transactions)
+    • Load dataset (284,807 transactions)
   </text>
   <text x="400" y="155" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Inspect structure and statistics
+    • Analyze distributions &amp; statistics
+  </text>
+  <text x="400" y="175" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Identify class imbalance (0.172% fraud)
   </text>
   
   <!-- Arrow 1 -->
-  <line x1="400" y1="170" x2="400" y2="200" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="190" x2="400" y2="220" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
   
-  <!-- Step 2: EDA -->
-  <rect x="250" y="200" width="300" height="110" rx="10" fill="url(#grad2)" />
-  <text x="400" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-    2. Exploratory Data Analysis
-  </text>
-  <text x="400" y="255" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Visualize class imbalance (0.172% fraud)
+  <!-- Step 2: Preprocessing -->
+  <rect x="250" y="220" width="300" height="130" rx="10" fill="url(#grad2)" />
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    2. Data Preprocessing
   </text>
   <text x="400" y="275" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Feature distributions &amp; correlations
+    • Train/Test split (80/20, stratified)
   </text>
   <text x="400" y="295" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Analyze patterns in time &amp; amount
+    • PowerTransformer for Amount
+  </text>
+  <text x="400" y="315" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • StandardScaler for Time
+  </text>
+  <text x="400" y="335" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • RobustScaler for V1-V28
   </text>
   
   <!-- Arrow 2 -->
-  <line x1="400" y1="310" x2="400" y2="340" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="350" x2="400" y2="380" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
   
-  <!-- Step 3: Data Preprocessing -->
-  <rect x="250" y="340" width="300" height="110" rx="10" fill="url(#grad3)" />
-  <text x="400" y="370" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-    3. Data Preprocessing
-  </text>
-  <text x="400" y="395" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Handle missing values
-  </text>
-  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Feature scaling &amp; normalization
+  <!-- Step 3: Class Imbalance Handling -->
+  <rect x="250" y="380" width="300" height="110" rx="10" fill="url(#grad3)" />
+  <text x="400" y="410" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    3. Handling Class Imbalance
   </text>
   <text x="400" y="435" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Balance dataset (SMOTE/Undersampling)
+    • Apply SMOTE (Synthetic Minority
+  </text>
+  <text x="400" y="455" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    Over-sampling Technique)
+  </text>
+  <text x="400" y="475" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Test multiple sampling strategies
   </text>
   
   <!-- Arrow 3 -->
-  <line x1="400" y1="450" x2="400" y2="480" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="490" x2="400" y2="520" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
   
-  <!-- Step 4: Feature Engineering -->
-  <rect x="250" y="480" width="300" height="90" rx="10" fill="url(#grad4)" />
-  <text x="400" y="510" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-    4. Feature Engineering
+  <!-- Step 4: Model Training -->
+  <rect x="250" y="520" width="300" height="130" rx="10" fill="url(#grad4)" />
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    4. Model Training &amp; Evaluation
   </text>
-  <text x="400" y="535" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Create new features
+  <text x="400" y="575" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Logistic Regression
   </text>
-  <text x="400" y="555" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Feature selection &amp; reduction
+  <text x="400" y="595" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Decision Tree Classifier
+  </text>
+  <text x="400" y="615" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Systematic SMOTE threshold analysis
+  </text>
+  <text x="400" y="635" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Calculate Precision, Recall, F1-Score
   </text>
   
   <!-- Arrow 4 -->
-  <line x1="400" y1="570" x2="400" y2="600" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="650" x2="400" y2="680" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
   
-  <!-- Step 5: Model Development -->
-  <rect x="250" y="600" width="300" height="130" rx="10" fill="url(#grad5)" />
-  <text x="400" y="630" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-    5. Model Development
+  <!-- Step 5: Visualization -->
+  <rect x="250" y="680" width="300" height="110" rx="10" fill="url(#grad5)" />
+  <text x="400" y="710" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    5. Visualization &amp; Comparison
   </text>
-  <text x="400" y="655" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Train multiple algorithms
+  <text x="400" y="735" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Precision-Recall curves
   </text>
-  <text x="400" y="675" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    (Logistic Regression, Random Forest,
+  <text x="400" y="755" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • ROC curves
   </text>
-  <text x="400" y="695" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    XGBoost, SVM, Neural Networks)
-  </text>
-  <text x="400" y="715" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Cross-validation &amp; hyperparameter tuning
+  <text x="400" y="775" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Confusion matrices
   </text>
   
   <!-- Arrow 5 -->
-  <line x1="400" y1="730" x2="400" y2="760" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="400" y1="790" x2="400" y2="820" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
   
-  <!-- Step 6: Model Evaluation -->
-  <rect x="250" y="760" width="300" height="130" rx="10" fill="url(#grad6)" />
-  <text x="400" y="790" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
-    6. Model Evaluation
-  </text>
-  <text x="400" y="815" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Accuracy, Precision, Recall, F1-Score
-  </text>
-  <text x="400" y="835" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • ROC-AUC curves
-  </text>
-  <text x="400" y="855" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Confusion matrix analysis
+  <!-- Step 6: Key Findings -->
+  <rect x="250" y="820" width="300" height="110" rx="10" fill="url(#grad6)" />
+  <text x="400" y="850" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    6. Key Findings &amp; Insights
   </text>
   <text x="400" y="875" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
-    • Precision-Recall curves
-  </text>
-  
-  <!-- Arrow 6 -->
-  <line x1="400" y1="890" x2="400" y2="920" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)" />
-  
-  <!-- Step 7: Results -->
-  <rect x="250" y="920" width="300" height="110" rx="10" fill="url(#grad7)" stroke="#764ba2" stroke-width="3" />
-  <text x="400" y="950" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">
-    7. Results &amp; Interpretation
-  </text>
-  <text x="400" y="975" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#2d3748">
     • Compare model performances
   </text>
-  <text x="400" y="995" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#2d3748">
-    • Analyze feature importance
+  <text x="400" y="895" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Optimal SMOTE threshold: 0.05
   </text>
-  <text x="400" y="1015" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#2d3748">
-    • Generate actionable insights
+  <text x="400" y="915" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    • Best model: Logistic Regression
   </text>
   
   <!-- Final Output Box -->
-  <rect x="200" y="1070" width="400" height="80" rx="15" fill="#f7fafc" stroke="#4299e1" stroke-width="3" stroke-dasharray="5,5" />
-  <text x="400" y="1100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2d3748">
-    🎯 Final Deliverable
+  <rect x="200" y="970" width="400" height="100" rx="15" fill="#f7fafc" stroke="#4299e1" stroke-width="3" stroke-dasharray="5,5" />
+  <text x="400" y="1000" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2d3748">
+    🎯 Final Result
   </text>
-  <text x="400" y="1125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
-    Fraud Detection Model with 99.95% Accuracy
+  <text x="400" y="1025" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
+    LR with SMOTE (0.05): 86 TP, 70 FP
   </text>
-  <text x="400" y="1145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
-    Ready for Production Deployment
+  <text x="400" y="1045" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
+    Precision: 55% | Recall: 88%
+  </text>
+  <text x="400" y="1065" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
+    Superior fraud detection performance
   </text>
   
   <!-- Side annotations -->
   <g opacity="0.7">
-    <text x="50" y="130" font-family="Arial, sans-serif" font-size="12" fill="#718096">
+    <text x="50" y="135" font-family="Arial, sans-serif" font-size="12" fill="#718096">
       Input
     </text>
-    <text x="30" y="400" font-family="Arial, sans-serif" font-size="12" fill="#718096">
+    <text x="30" y="285" font-family="Arial, sans-serif" font-size="12" fill="#718096">
       Processing
     </text>
-    <text x="30" y="670" font-family="Arial, sans-serif" font-size="12" fill="#718096">
+    <text x="30" y="580" font-family="Arial, sans-serif" font-size="12" fill="#718096">
       Training
     </text>
-    <text x="30" y="825" font-family="Arial, sans-serif" font-size="12" fill="#718096">
-      Validation
+    <text x="30" y="735" font-family="Arial, sans-serif" font-size="12" fill="#718096">
+      Analysis
     </text>
-    <text x="40" y="975" font-family="Arial, sans-serif" font-size="12" fill="#718096">
+    <text x="40" y="875" font-family="Arial, sans-serif" font-size="12" fill="#718096">
       Output
     </text>
   </g>
   
   <!-- Decorative elements -->
-  <circle cx="100" cy="125" r="4" fill="#667eea" />
-  <circle cx="100" cy="395" r="4" fill="#4facfe" />
-  <circle cx="100" cy="665" r="4" fill="#fa709a" />
-  <circle cx="100" cy="820" r="4" fill="#30cfd0" />
-  <circle cx="100" cy="970" r="4" fill="#a8edea" />
+  <circle cx="100" cy="135" r="4" fill="#667eea" />
+  <circle cx="100" cy="285" r="4" fill="#f093fb" />
+  <circle cx="100" cy="435" r="4" fill="#4facfe" />
+  <circle cx="100" cy="580" r="4" fill="#43e97b" />
+  <circle cx="100" cy="735" r="4" fill="#fa709a" />
+  <circle cx="100" cy="875" r="4" fill="#30cfd0" />
+  
+  <!-- Key Insight Box -->
+  <rect x="150" y="1120" width="500" height="60" rx="10" fill="#fff5f5" stroke="#fc8181" stroke-width="2" />
+  <text x="400" y="1145" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#c53030">
+    💡 Critical Insight
+  </text>
+  <text x="400" y="1165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#742a2a">
+    SMOTE threshold optimization is essential for balancing fraud detection
+  </text>
   
   <!-- Copyright -->
-  <text x="400" y="1380" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#a0aec0">
-    Credit Card Fraud Detection Project • Machine Learning Pipeline
+  <text x="400" y="1280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#a0aec0">
+    Credit Card Fraud Detection Project • Actual Implementation Workflow
   </text>
 </svg>
