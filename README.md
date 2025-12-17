@@ -271,7 +271,7 @@ Credit-Card-Fraud-Detection/
 
 **Your Name**
 - GitHub: [@DoubleCyclone](https://github.com/DoubleCyclone)
-- LinkedIn: [LinkedIn Profile]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/umut-bekdemir-803a2825a/))
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/umut-bekdemir-803a2825a/)
 - Email: <umut.bekdemir29@gmail.com>
 
 ---
