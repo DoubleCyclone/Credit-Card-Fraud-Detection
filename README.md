@@ -7,7 +7,7 @@ A comprehensive machine learning project that identifies fraudulent credit card 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
 [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
-[![Kaggle](https://img.shields.io/badge/Kaggle-Competition-20BEFF.svg)](https://!ww.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Competition-20BEFF.svg)](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 
 ---
 
@@ -118,55 +118,13 @@ The [dataset](https://!ww.kaggle.com/datasets/mlg-ulb/creditcardfraud) contains 
 
 ## 💻 Installation
 
-### Prerequisites
-- Python 3.8 or higher
-- pip package manager
-
 ### Setup Instructions
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/DoubleCyclone/Credit-Card-Fraud-Detection.git
-   cd Credit-Card-Fraud-Detection
-   ```
-
-2. **Create a virtual environment (recommended)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install required packages**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Download the dataset**
-   - Download from [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud)
-   - Place the `creditcard.csv` file in the `data/` directory
+1. Download the [dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) from Kaggle
+2. Upload to Google Drive at `content/drive/MyDrive/Colab_Materials/Credit_Card_Fraud_Detection`
+3. See the [full notebook](notebooks/credit_card_fraud_detection.ipynb) for the complete analysis
 
 ---
-
-## 🚀 Usage
-
-### Running the Jupyter Notebook
-
-1. **Start Jupyter Notebook**
-   ```bash
-   jupyter notebook
-   ```
-
-2. **Navigate to the notebooks directory**
-   ```
-   notebooks/credit_card_fraud_detection.ipynb
-   ```
-
-3. **Run the cells sequentially** to:
-   - Load and explore the data
-   - Perform EDA
-   - Train models
-   - Evaluate performance
-   - Generate predictions
 
 ### Project Structure
 ```
