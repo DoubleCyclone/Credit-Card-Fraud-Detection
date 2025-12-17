@@ -18,7 +18,6 @@ A comprehensive machine learning project that identifies fraudulent credit card 
 - [Project Workflow](#-project-workflow)
 - [Technologies Used](#-technologies-used)
 - [Installation](#-installation)
-- [Usage](#-usage)
 - [Model Performance](#-model-performance)
 - [Key Features](#-key-features)
 - [Results & Insights](#-results--insights)
